@@ -8,4 +8,5 @@ RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/weba
 EXPOSE 8080
 ENV JAVA_HOME /usr/lib/jvm/default-java
 WORKDIR /usr/share/tomcat9
+RUN cp /usr/share/tomcat9/etc/server.xml /usr/share/tomcat9/conf/
 CMD ["bin/catalina.sh", "run"]
