@@ -3,6 +3,8 @@ RUN apt update
 #RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 RUN apt install maven git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+RUN pwd
+RUN ls -l
 RUN mvn -f /boxfuse-sample-java-war-hello/pom.xml package
 #RUN mkdir /usr/local/tomcat
 #RUN mkdir /usr/local/tomcat/webapps
