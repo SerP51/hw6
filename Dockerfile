@@ -6,4 +6,4 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f /boxfuse-sample-java-war-hello/pom.xml package
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD /usr/local/apache-tomcat-9.0.54/bin/startup.sh && tail -f /usr/local/apache-tomcat-9.0.54/bin/logs/catalina.out
