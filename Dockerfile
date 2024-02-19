@@ -4,9 +4,7 @@ RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 RUN apt install default-jdk tomcat9 maven git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN mvn -f /boxfuse-sample-java-war-hello/pom.xml package
-RUN ls -l /usr/local
-RUN ls -l /usr/local/tomcat
-RUN ls -l /usr/local/tomcat/webapps
+RUN mkdir /usr/local/tomcat
 RUN mkdir /usr/local/tomcat/webapps
 RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
 RUN cp -R /boxfuse-sample-java-war-hello/target/hello-1.0 /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
