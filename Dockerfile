@@ -3,16 +3,16 @@ RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 RUN apt install default-jdk tomcat9 maven git -y
 RUN pwd
-RUN ll
+RUN ls -l
 RUN cd /tmp
 RUN pwd
-RUN ll
+RUN ls -l
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN pwd
-RUN ll
+RUN ls -l
 RUN cd boxfuse-sample-java-war-hello/
 RUN pwd
-RUN ll
+RUN ls -l
 RUN cp /tmp/boxfuse-sample-java-war-hello/pom.xml /
 RUN mvn package
 RUN cd target/
