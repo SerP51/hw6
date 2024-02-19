@@ -8,8 +8,8 @@ RUN ls -l
 RUN mvn -f ./boxfuse-sample-java-war-hello/pom.xml package
 #RUN mkdir /usr/local/tomcat
 #RUN mkdir /usr/local/tomcat/webapps
-RUN cp /boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
-RUN cp -R /boxfuse-sample-java-war-hello/target/hello-1.0 /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
+RUN cp ./boxfuse-sample-java-war-hello/target/hello-1.0.war /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
+RUN cp -R ./boxfuse-sample-java-war-hello/target/hello-1.0 /usr/local/tomcat/webapps/ #/var/lib/tomcat9/webapps/
 #EXPOSE 8080
 #RUN ls -l /usr/local/tomcat/webapps/
 #ENV JAVA_HOME /usr/lib/jvm/default-java
