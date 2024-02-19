@@ -1,4 +1,4 @@
-FROM tomcat:9.0-jdk21
+FROM tomcat:9-jdk11
 RUN apt update
 #RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
 RUN apt install maven git -y
